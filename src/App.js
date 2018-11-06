@@ -7,13 +7,13 @@ class App extends Component {
 
   _showSnackbarHandler = (e) => {
     e.preventDefault();
-    this.snackbarRef.current.openSnackBar();
+    this.snackbarRef.current.openSnackBar('button click event');
   }
 
   render() {
     return (
       <div className="App">
-        <button onClick = {this._showSnackbarHandler} >Click To Open To Snackbar</button>
+        <button onClick = {this._showSnackbarHandler}>Click To Open To Snackbar</button>
         <Snackbar ref = {this.snackbarRef} />
       </div>
     );
