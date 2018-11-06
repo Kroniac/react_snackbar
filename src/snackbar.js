@@ -8,7 +8,7 @@ export class Snackbar extends PureComponent {
     isActive: false,
   }
 
-  openSnackBar = (message = 'Something is wrong...') => {
+  openSnackBar = (message = 'Something went wrong...') => {
     this.message = message;
     this.setState({ isActive: true }, () => {
       setTimeout(() => {
