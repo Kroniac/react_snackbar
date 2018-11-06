@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Snackbar } from './snackbar';
 import './App.css';
 
 class App extends Component {
+  snackbarRef = React.createRef();
+
+  _showSnackbarHandler = (e) => {
+    e.preventDefault();
+    this.snackbarRef.current.openSnackBar();
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <button onClick = {this._showSnackbarHandler} >Click To Open To Snackbar</button>
+        <Snackbar ref = {this.snackbarRef} />
       </div>
     );
   }
