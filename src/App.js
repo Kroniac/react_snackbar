@@ -7,7 +7,7 @@ class App extends Component {
 
   _showSnackbarHandler = (e) => {
     e.preventDefault();
-    this.snackbarRef.current.openSnackBar('button click event');
+    this.snackbarRef.current.openSnackBar('Button Pressed...');
   }
 
   render() {
